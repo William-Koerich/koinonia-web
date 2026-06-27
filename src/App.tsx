@@ -10,6 +10,8 @@ import Localizacao from './components/Localizacao'
 import Footer from './components/Footer'
 import MissaoMocambique from './pages/MissaoMocambique'
 import LIMPAZ from './pages/LIMPAZ'
+import Login from './pages/Login'
+import Cadastro from './pages/Cadastro'
 import './App.css'
 
 function Home() {
@@ -36,6 +38,8 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/projetos/missao-mocambique" element={<MissaoMocambique />} />
       <Route path="/projetos/limpaz" element={<LIMPAZ />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
     </Routes>
   )
 }
