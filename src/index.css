@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Brand */
+  --gold: #d3b86a;
+  --gold-light: #e8d090;
+  --gold-dark: #a8903a;
+  --gold-muted: rgba(211,184,106,0.15);
+
+  /* Blue palette */
+  --blue: #0a215b;
+  --blue-light: #1a3a7a;
+  --blue-mid: #0d2d6e;
+  --blue-glow: rgba(10,33,91,0.5);
+
+  /* Backgrounds */
+  --bg: #08091a;         /* azul-marinho escuro — seções */
+  --bg-alt: #060714;     /* variação ligeiramente mais escura */
+  --bg-hero: #000000;    /* puro preto — só na hero */
+
+  /* Card shadows vivid */
+  --shadow-blue: 0 8px 32px rgba(10,33,91,0.45), 0 2px 8px rgba(10,33,91,0.25);
+  --shadow-gold: 0 8px 32px rgba(211,184,106,0.18), 0 2px 8px rgba(211,184,106,0.08);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.5), 0 1px 2px rgba(211,184,106,0.06);
+
+  /* Text */
+  --white: #ffffff;
+  --gray-light: #e8e8f0;
+  --gray-mid: #8090b0;
+  --gray-dark: #2a2d3e;
+
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+
+  --transition-fast: 0.2s cubic-bezier(0.4,0,0.2,1);
+  --transition-base: 0.4s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow: 0.7s cubic-bezier(0.4,0,0.2,1);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--white);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  overflow-x: hidden;
+  background: var(--bg);
+  background-color: #08091a;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; outline: none; font-family: var(--font-body); }
+ul { list-style: none; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+::selection { background: rgba(211,184,106,0.25); color: var(--white); }
