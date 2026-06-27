@@ -1,0 +1,14 @@
+/* Global layout reset for church site */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  border: none;
+  min-height: 100svh;
+  display: block;
+}
+
+body {
+  background: #06060f;
+}
