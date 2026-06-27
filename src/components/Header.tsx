@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 import { Menu, X, LogIn } from 'lucide-react'
 import logo3 from '../assets/logo-3.png'
 
@@ -12,6 +13,7 @@ const navLinks = [
 ]
 
 export default function Header() {
+  const navigate = useNavigate()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -111,6 +113,7 @@ export default function Header() {
         {/* Actions */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <motion.button
+            onClick={() => navigate('/login')}
             whileHover={{ scale: 1.05, boxShadow: '0 0 22px rgba(211,184,106,0.45)' }}
             whileTap={{ scale: 0.96 }}
             style={{
