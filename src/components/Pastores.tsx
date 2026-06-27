@@ -4,36 +4,113 @@ import { motion, AnimatePresence } from 'framer-motion'
 const pastores = [
   {
     id: 1,
-    nome: 'Pr. Rafael Souza',
+    nome: 'Pr. Léo',
     cargo: 'Pastor Presidente',
-    desc: 'Com mais de 20 anos de ministério, o Pr. Rafael lidera a Koinonia com visão profética e coração pastoral. Sua vida é marcada pela busca intensa de Deus e pelo amor genuíno às pessoas.',
+    desc: 'Líder visionário da Igreja Koinônia, o Pr. Léo conduz a comunidade com autoridade espiritual, amor genuíno e um profundo chamado para a nação.',
     versiculo: '"O SENHOR é o meu pastor; nada me faltará." — Salmos 23:1',
-    bg: 'linear-gradient(160deg, #0a1a3a 0%, #06080f 55%, #0d2040 100%)',
-    initials: 'RS',
+    bg: 'linear-gradient(160deg, #0a1a3a 0%, #050810 55%, #0d2040 100%)',
+    initials: 'PL',
     colorA: '#d3b86a',
-    colorB: '#a8903a',
+    colorB: '#8a6020',
   },
   {
     id: 2,
-    nome: 'Pra. Carla Souza',
-    cargo: 'Pastora de Mulheres',
-    desc: 'Apaixonada por ver mulheres caminhando em propósito, a Pra. Carla lidera o ministério feminino com amor, sabedoria e unção. Acredita que cada mulher tem um destino glorioso em Deus.',
-    versiculo: '"Mulher virtuosa, quem a achará? O seu valor muito excede o de rubins." — Prov 31:10',
-    bg: 'linear-gradient(160deg, #180830 0%, #06080f 55%, #200840 100%)',
-    initials: 'CS',
-    colorA: '#c0a0f0',
-    colorB: '#9060c0',
+    nome: 'Pra. Rosa',
+    cargo: 'Pastora',
+    desc: 'A Pra. Rosa é um pilar de fé e intercessão na Koinônia, ministério marcado pela presença de Deus e pelo cuidado com as pessoas.',
+    versiculo: '"A graça do Senhor Jesus Cristo seja com o vosso espírito." — Fil 4:23',
+    bg: 'linear-gradient(160deg, #1a0830 0%, #050810 55%, #250840 100%)',
+    initials: 'PR',
+    colorA: '#d3b86a',
+    colorB: '#703090',
   },
   {
     id: 3,
-    nome: 'Pr. Lucas Ferreira',
-    cargo: 'Pastor de Jovens',
-    desc: 'Apóstolo da nova geração, o Pr. Lucas conecta o coração dos jovens ao coração de Deus com autenticidade e fogo. Lidera o ministério jovem com uma paixão que é contagiante.',
-    versiculo: '"Ninguém te despreze por seres jovem." — 1 Timóteo 4:12',
-    bg: 'linear-gradient(160deg, #0a215b 0%, #06080f 55%, #142a6a 100%)',
-    initials: 'LF',
-    colorA: '#5080e0',
+    nome: 'Pr. Nelson',
+    cargo: 'Pastor',
+    desc: 'O Pr. Nelson serve com dedicação e fidelidade, edificando a Igreja através do ensino da Palavra e do pastoreio de vidas.',
+    versiculo: '"Tudo posso naquele que me fortalece." — Filipenses 4:13',
+    bg: 'linear-gradient(160deg, #0a215b 0%, #050810 55%, #142a70 100%)',
+    initials: 'PN',
+    colorA: '#6090e0',
     colorB: '#0a215b',
+  },
+  {
+    id: 4,
+    nome: 'Pra. Yara',
+    cargo: 'Pastora',
+    desc: 'A Pra. Yara ministra com sensibilidade ao Espírito Santo, levando cura e restauração onde quer que vá.',
+    versiculo: '"O amor é paciente, é benigno." — 1 Coríntios 13:4',
+    bg: 'linear-gradient(160deg, #1a1010 0%, #050810 55%, #301828 100%)',
+    initials: 'PY',
+    colorA: '#e0a0c0',
+    colorB: '#803050',
+  },
+  {
+    id: 5,
+    nome: 'Pr. Edmar',
+    cargo: 'Pastor',
+    desc: 'O Pr. Edmar é um servo fiel, comprometido com a missão da Igreja e com o crescimento espiritual de cada membro da comunidade.',
+    versiculo: '"Seja a luz de vocês assim brilhar." — Mateus 5:16',
+    bg: 'linear-gradient(160deg, #102010 0%, #050810 55%, #1a3018 100%)',
+    initials: 'PE',
+    colorA: '#70c080',
+    colorB: '#205030',
+  },
+  {
+    id: 6,
+    nome: 'Pra. Duci',
+    cargo: 'Pastora',
+    desc: 'A Pra. Duci serve com alegria e entrega total, sendo instrumento de bênção na vida das famílias e dos grupos de discipulado.',
+    versiculo: '"Alegrai-vos sempre no Senhor." — Filipenses 4:4',
+    bg: 'linear-gradient(160deg, #201008 0%, #050810 55%, #382010 100%)',
+    initials: 'PD',
+    colorA: '#e0a060',
+    colorB: '#804010',
+  },
+  {
+    id: 7,
+    nome: 'Pr. Laélson',
+    cargo: 'Pastor',
+    desc: 'O Pr. Laélson ministra com unção e precisão profética, sendo usado por Deus para edificar a Igreja e alcançar os perdidos.',
+    versiculo: '"Espera no SENHOR; tem bom ânimo." — Salmos 27:14',
+    bg: 'linear-gradient(160deg, #0a215b 0%, #050810 55%, #0d1a50 100%)',
+    initials: 'LA',
+    colorA: '#90b0ff',
+    colorB: '#2040a0',
+  },
+  {
+    id: 8,
+    nome: 'Pra. Miriam',
+    cargo: 'Pastora',
+    desc: 'A Pra. Miriam é um exemplo de fidelidade e consagração, ministrando profundidade da Palavra com amor e compaixão.',
+    versiculo: '"A mulher virtuosa é a coroa do seu marido." — Prov 12:4',
+    bg: 'linear-gradient(160deg, #180830 0%, #050810 55%, #200838 100%)',
+    initials: 'PM',
+    colorA: '#c0a0e0',
+    colorB: '#6030a0',
+  },
+  {
+    id: 9,
+    nome: 'Pr. Daniel',
+    cargo: 'Pastor',
+    desc: 'O Pr. Daniel serve com integridade e paixão pelo mover de Deus, sendo referência de caráter e comprometimento na liderança.',
+    versiculo: '"Daniel tinha um espírito excelente." — Daniel 6:3',
+    bg: 'linear-gradient(160deg, #0a1030 0%, #050810 55%, #101838 100%)',
+    initials: 'DN',
+    colorA: '#80b0d0',
+    colorB: '#203860',
+  },
+  {
+    id: 10,
+    nome: 'Pra. Sarah',
+    cargo: 'Pastora',
+    desc: 'A Pra. Sarah ministra com fé e ousadia, levando a mensagem do Evangelho com poder e demonstração do Espírito Santo.',
+    versiculo: '"Pela fé, Sara recebeu força." — Hebreus 11:11',
+    bg: 'linear-gradient(160deg, #200a10 0%, #050810 55%, #300a18 100%)',
+    initials: 'SA',
+    colorA: '#f0a0a0',
+    colorB: '#802030',
   },
 ]
 
@@ -41,8 +118,9 @@ export default function Pastores() {
   const [current, setCurrent] = useState(0)
   const [direction, setDirection] = useState(1)
   const [expanded, setExpanded] = useState(false)
-  const touchStartX = useRef<number | null>(null)
   const autoRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const dragStartX = useRef(0)
+  const isDragging = useRef(false)
 
   const goTo = (index: number, dir: number) => {
     setDirection(dir)
@@ -55,22 +133,24 @@ export default function Pastores() {
 
   useEffect(() => {
     if (expanded) return
-    autoRef.current = setTimeout(next, 6000)
+    autoRef.current = setTimeout(next, 5500)
     return () => { if (autoRef.current) clearTimeout(autoRef.current) }
   }, [current, expanded])
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX
+  const handleDragStart = (e: React.TouchEvent | React.MouseEvent) => {
+    isDragging.current = true
+    dragStartX.current = 'touches' in e ? e.touches[0].clientX : e.clientX
   }
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return
-    const diff = touchStartX.current - e.changedTouches[0].clientX
-    if (Math.abs(diff) > 45) diff > 0 ? next() : prev()
-    touchStartX.current = null
+
+  const handleDragEnd = (e: React.TouchEvent | React.MouseEvent) => {
+    if (!isDragging.current) return
+    isDragging.current = false
+    const endX = 'changedTouches' in e ? e.changedTouches[0].clientX : e.clientX
+    const diff = dragStartX.current - endX
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev()
   }
 
   const pastor = pastores[current]
-  // First sentence only
   const firstSentence = pastor.desc.split('.')[0] + '.'
 
   return (
@@ -82,7 +162,7 @@ export default function Pastores() {
         position: 'relative', overflow: 'hidden',
       }}
     >
-      {/* Rotating rings decoration */}
+      {/* Ring decoration */}
       <motion.div
         style={{
           position: 'absolute', top: '50%', left: '50%',
@@ -122,20 +202,21 @@ export default function Pastores() {
         </h2>
       </motion.div>
 
-      {/* Carousel */}
-      <div
-        onTouchStart={handleTouchStart}
-        onTouchEnd={handleTouchEnd}
-        style={{ position: 'relative', maxWidth: '420px', margin: '0 auto', padding: '0 24px', userSelect: 'none' }}
-      >
+      {/* Carousel container */}
+      <div style={{ position: 'relative', maxWidth: '420px', margin: '0 auto', padding: '0 24px' }}>
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={pastor.id}
             custom={direction}
-            initial={{ opacity: 0, x: direction * 60 }}
+            initial={{ opacity: 0, x: direction * 80 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: direction * -60 }}
-            transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
+            exit={{ opacity: 0, x: direction * -80 }}
+            transition={{ duration: 0.36, ease: [0.22, 1, 0.36, 1] }}
+            /* Drag/swipe — mouse e touch */
+            onMouseDown={handleDragStart}
+            onMouseUp={handleDragEnd}
+            onTouchStart={handleDragStart}
+            onTouchEnd={handleDragEnd}
             style={{
               borderRadius: '24px',
               overflow: 'hidden',
@@ -144,7 +225,9 @@ export default function Pastores() {
               border: '1px solid rgba(255,255,255,0.07)',
               boxShadow: `0 24px 64px rgba(0,0,0,0.65), 0 0 0 1px rgba(211,184,106,0.08)`,
               aspectRatio: '3/4',
-              maxHeight: '540px',
+              maxHeight: '520px',
+              cursor: 'grab',
+              userSelect: 'none',
             }}
           >
             {/* Avatar / photo placeholder */}
@@ -152,40 +235,37 @@ export default function Pastores() {
               position: 'absolute', inset: 0,
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               flexDirection: 'column', gap: '10px',
-              paddingBottom: expanded ? '60%' : '42%',
-              transition: 'padding-bottom 0.4s ease',
+              paddingBottom: expanded ? '65%' : '44%',
+              transition: 'padding-bottom 0.45s ease',
+              pointerEvents: 'none',
             }}>
-              <motion.div
-                whileHover={{ scale: 1.06 }}
-                style={{
-                  width: 'clamp(80px, 18vw, 110px)',
-                  height: 'clamp(80px, 18vw, 110px)',
-                  borderRadius: '50%',
-                  background: `linear-gradient(135deg, ${pastor.colorA}, ${pastor.colorB})`,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontFamily: 'Cinzel, serif', fontWeight: 700,
-                  fontSize: 'clamp(24px, 5vw, 36px)', color: '#fff',
-                  boxShadow: `0 0 40px ${pastor.colorA}40`,
-                  flexShrink: 0,
-                }}
-              >
+              <div style={{
+                width: 'clamp(72px, 16vw, 100px)',
+                height: 'clamp(72px, 16vw, 100px)',
+                borderRadius: '50%',
+                background: `linear-gradient(135deg, ${pastor.colorA}, ${pastor.colorB})`,
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: 'Cinzel, serif', fontWeight: 700,
+                fontSize: 'clamp(20px, 4vw, 30px)', color: '#fff',
+                boxShadow: `0 0 36px ${pastor.colorA}35`,
+                flexShrink: 0,
+              }}>
                 {pastor.initials}
-              </motion.div>
+              </div>
               <span style={{
-                fontSize: '10px', color: 'rgba(255,255,255,0.3)',
+                fontSize: '9px', color: 'rgba(255,255,255,0.28)',
                 letterSpacing: '2px', fontFamily: 'Cinzel, serif',
               }}>
                 FOTO EM BREVE
               </span>
             </div>
 
-            {/* Instagram-style bottom overlay */}
+            {/* Instagram overlay */}
             <div style={{
               position: 'absolute', bottom: 0, left: 0, right: 0,
-              background: 'linear-gradient(0deg, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.82) 55%, transparent 100%)',
-              padding: 'clamp(16px, 3vw, 24px)',
+              background: 'linear-gradient(0deg, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.85) 50%, transparent 100%)',
+              padding: 'clamp(14px, 3vw, 22px)',
             }}>
-              {/* Role badge */}
               <span style={{
                 display: 'inline-block', padding: '3px 10px',
                 borderRadius: '50px',
@@ -197,31 +277,31 @@ export default function Pastores() {
                 {pastor.cargo}
               </span>
 
-              {/* Name */}
               <h3 style={{
                 fontFamily: 'Cinzel, serif',
-                fontSize: 'clamp(16px, 3.5vw, 21px)',
+                fontSize: 'clamp(15px, 3.5vw, 20px)',
                 fontWeight: 700, color: '#fff', marginBottom: '8px', lineHeight: 1.2,
               }}>
                 {pastor.nome}
               </h3>
 
-              {/* Caption — collapsed: first sentence + "ler mais" */}
+              {/* Caption colapsada / expandida */}
               <AnimatePresence initial={false} mode="wait">
                 {!expanded ? (
                   <motion.p
-                    key="collapsed"
+                    key="col"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    style={{ color: 'rgba(255,255,255,0.65)', fontSize: '13px', lineHeight: 1.55 }}
+                    transition={{ duration: 0.2 }}
+                    style={{ color: 'rgba(255,255,255,0.62)', fontSize: '13px', lineHeight: 1.55, margin: 0 }}
                   >
                     {firstSentence}{' '}
                     <button
-                      onClick={() => setExpanded(true)}
+                      onClick={e => { e.stopPropagation(); setExpanded(true) }}
                       style={{
                         background: 'none', border: 'none', padding: 0,
-                        color: 'rgba(255,255,255,0.4)', fontSize: '13px',
+                        color: 'rgba(255,255,255,0.38)', fontSize: '13px',
                         cursor: 'pointer', fontFamily: 'Inter, sans-serif',
                       }}
                     >
@@ -230,27 +310,28 @@ export default function Pastores() {
                   </motion.p>
                 ) : (
                   <motion.div
-                    key="expanded"
+                    key="exp"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
                     style={{ overflow: 'hidden' }}
                   >
-                    <p style={{ color: 'rgba(255,255,255,0.72)', fontSize: '13px', lineHeight: 1.65, marginBottom: '10px' }}>
+                    <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', lineHeight: 1.65, marginBottom: '10px' }}>
                       {pastor.desc}
                     </p>
                     <p style={{
-                      color: 'rgba(255,255,255,0.45)', fontSize: '12px',
+                      color: 'rgba(255,255,255,0.42)', fontSize: '12px',
                       fontStyle: 'italic', lineHeight: 1.55, marginBottom: '8px',
                       borderLeft: `2px solid ${pastor.colorA}50`, paddingLeft: '10px',
                     }}>
                       {pastor.versiculo}
                     </p>
                     <button
-                      onClick={() => setExpanded(false)}
+                      onClick={e => { e.stopPropagation(); setExpanded(false) }}
                       style={{
                         background: 'none', border: 'none', padding: 0,
-                        color: 'rgba(255,255,255,0.35)', fontSize: '12px',
+                        color: 'rgba(255,255,255,0.3)', fontSize: '12px',
                         cursor: 'pointer', fontFamily: 'Inter, sans-serif',
                       }}
                     >
@@ -263,25 +344,49 @@ export default function Pastores() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Dots — clickable, also act as prev/next */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '18px' }}>
-          {pastores.map((_, i) => (
-            <motion.button
-              key={i}
-              onClick={() => goTo(i, i > current ? 1 : -1)}
-              whileHover={{ scale: 1.4 }}
-              whileTap={{ scale: 0.9 }}
-              style={{
-                width: i === current ? '28px' : '8px',
-                height: '8px', borderRadius: '4px',
-                background: i === current ? '#d3b86a' : 'rgba(255,255,255,0.18)',
-                border: 'none', cursor: 'pointer',
-                padding: 0,
-                transition: 'width 0.3s ease, background 0.3s ease',
-              }}
-            />
-          ))}
+        {/* Counter + dots compactos */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginTop: '18px' }}>
+          <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'Cinzel, serif', letterSpacing: '1px', minWidth: '40px', textAlign: 'right' }}>
+            {String(current + 1).padStart(2, '0')}
+          </span>
+
+          {/* Mini dots — só aparece os 5 mais próximos */}
+          <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+            {pastores.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => goTo(i, i > current ? 1 : -1)}
+                style={{
+                  width: i === current ? '24px' : '6px',
+                  height: '6px',
+                  borderRadius: '3px',
+                  background: i === current ? '#d3b86a' : 'rgba(255,255,255,0.15)',
+                  border: 'none', cursor: 'pointer', padding: 0,
+                  transition: 'width 0.3s ease, background 0.3s ease',
+                  flexShrink: 0,
+                }}
+              />
+            ))}
+          </div>
+
+          <span style={{ color: 'rgba(255,255,255,0.3)', fontSize: '12px', fontFamily: 'Cinzel, serif', letterSpacing: '1px', minWidth: '40px' }}>
+            {String(pastores.length).padStart(2, '0')}
+          </span>
         </div>
+
+        {/* Swipe hint — só na primeira vez */}
+        <motion.p
+          initial={{ opacity: 0.5 }}
+          animate={{ opacity: 0 }}
+          transition={{ delay: 2.5, duration: 1 }}
+          style={{
+            textAlign: 'center', color: 'rgba(255,255,255,0.25)', fontSize: '11px',
+            letterSpacing: '1.5px', fontFamily: 'Cinzel, serif', marginTop: '8px',
+            pointerEvents: 'none',
+          }}
+        >
+          ← DESLIZE →
+        </motion.p>
       </div>
     </section>
   )
