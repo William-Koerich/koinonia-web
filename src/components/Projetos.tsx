@@ -7,7 +7,7 @@ const projetos = [
   {
     icon: Globe,
     tag: 'MISSÕES',
-    title: 'Missão Moçambique',
+    title: 'Projeto Cirineu',
     desc: 'Levando o Evangelho ao coração da África — plantando igrejas, treinando líderes e assistindo comunidades carentes em Moçambique.',
     detail: 'Plantação de igrejas, capacitação de líderes e assistência social.',
     color: '#d3b86a',
