@@ -17,7 +17,7 @@ const eventos = [
   {
     id: 2,
     tag: 'JOVENS',
-    title: 'Encontro da Juventude',
+    title: 'Encontro de Jovens',
     desc: 'Um espaço vibrante para jovens crescerem juntos na fé e na comunidade.',
     date: 'Toda Sexta',
     time: '20:00 — 22:00',
@@ -39,7 +39,7 @@ const eventos = [
   {
     id: 4,
     tag: 'ESPECIAL',
-    title: 'Conferência Koinonia 2025',
+    title: 'Conferência Koinonia 2026',
     desc: 'Nosso maior evento do ano! Dias de imersão na presença de Deus com pregadores nacionais.',
     date: '15–17 Agosto',
     time: 'Noites 19:30',
