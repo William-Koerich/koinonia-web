@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { User, MapPin, Lock, Check, AlertCircle, Camera, Loader } from 'lucide-react'
 import PageShell, { Card, inputStyle, labelStyle, btnPrimary } from '../PageShell'
 
-const API = 'http://localhost:3000'
+import { API } from '../../../config'
 
 function authHeaders(contentType = 'application/json') {
   return {
