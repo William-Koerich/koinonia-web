@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useNavigate, Link } from 'react-router-dom'
 import { Eye, EyeOff, UserPlus, ArrowLeft } from 'lucide-react'
 import logo3 from '../assets/logo-3.png'
+import { API } from '../config'
 
 export default function Cadastro() {
   const navigate = useNavigate()
@@ -32,7 +33,7 @@ export default function Cadastro() {
 
     setLoading(true)
     try {
-      const res = await fetch('http://localhost:3000/auth/register', {
+      const res = await fetch(`${API}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
