@@ -26,7 +26,7 @@ export default function Login() {
       if (!res.ok) throw new Error(data.error ?? 'Erro ao entrar')
       localStorage.setItem('koinonia_token', data.token)
       localStorage.setItem('koinonia_usuario', JSON.stringify(data.usuario))
-      navigate('/')
+      navigate('/dashboard')
     } catch (err: any) {
       setErro(err.message)
     } finally {
