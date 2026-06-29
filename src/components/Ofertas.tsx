@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { Copy, Check, QrCode } from 'lucide-react'
+import { Copy, Check } from 'lucide-react'
+import qrcode from '../assets/qrcode-oferta.png'
 
 const PIX_KEY = '12.345.678/0001-90'
 
@@ -92,9 +93,9 @@ export default function Ofertas() {
               background: 'rgba(211,184,106,0.12)',
               border: '1px solid rgba(211,184,106,0.28)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexShrink: 0,
+              flexShrink: 0, overflow: 'hidden',
             }}>
-              <QrCode size={24} color="#d3b86a" />
+              <img src={qrcode} alt="QR Code PIX" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
             </div>
             <div>
               <h3 style={{ fontFamily: 'Cinzel, serif', fontSize: 'clamp(18px, 2.5vw, 22px)', fontWeight: 700, color: '#fff' }}>
@@ -158,22 +159,19 @@ export default function Ofertas() {
               display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
               gap: '12px',
             }}>
-              {/* QR Code placeholder */}
               <div style={{
-                width: 'clamp(120px, 18vw, 160px)',
-                height: 'clamp(120px, 18vw, 160px)',
+                width: 'clamp(140px, 20vw, 175px)',
+                height: 'clamp(140px, 20vw, 175px)',
                 borderRadius: '16px',
-                background: 'rgba(255,255,255,0.04)',
-                border: '1px dashed rgba(211,184,106,0.25)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                flexDirection: 'column', gap: '8px',
+                background: '#fff',
+                padding: '8px',
+                boxShadow: '0 0 32px rgba(211,184,106,0.15)',
               }}>
-                <QrCode size={32} color="rgba(211,184,106,0.35)" />
-                <span style={{ color: 'rgba(255,255,255,0.25)', fontSize: '10px', letterSpacing: '1.5px', fontFamily: 'Cinzel, serif', textAlign: 'center' }}>
-                  QR CODE
-                  <br />
-                  EM BREVE
-                </span>
+                <img
+                  src={qrcode}
+                  alt="QR Code PIX"
+                  style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' }}
+                />
               </div>
               <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '11px', textAlign: 'center', letterSpacing: '0.3px', maxWidth: '140px' }}>
                 Aponte a câmera do celular para pagar
