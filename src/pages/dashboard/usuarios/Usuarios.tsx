@@ -269,7 +269,6 @@ export default function Usuarios() {
       {/* Confirm dialog */}
       <ConfirmDialog
         open={confirm.open}
-        tipo={confirm.tipo}
         title={confirm.tipo === 'deletar' ? 'Excluir usuário' : confirm.usuario?.ativo ? 'Inativar usuário' : 'Ativar usuário'}
         message={
           confirm.tipo === 'deletar'
