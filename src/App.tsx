@@ -12,6 +12,20 @@ import MissaoMocambique from './pages/MissaoMocambique'
 import LIMPAZ from './pages/LIMPAZ'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
+import PrivateRoute from './components/PrivateRoute'
+import DashboardLayout from './pages/dashboard/DashboardLayout'
+import DashboardHome from './pages/dashboard/DashboardHome'
+import CriarEvento from './pages/dashboard/eventos/CriarEvento'
+import EditarEvento from './pages/dashboard/eventos/EditarEvento'
+import MeusEventos from './pages/dashboard/eventos/MeusEventos'
+import CriarEscala from './pages/dashboard/escala/CriarEscala'
+import EditarEscala from './pages/dashboard/escala/EditarEscala'
+import MinhasEscalas from './pages/dashboard/escala/MinhasEscalas'
+import CriarMinisterio from './pages/dashboard/ministerios/CriarMinisterio'
+import EditarMinisterio from './pages/dashboard/ministerios/EditarMinisterio'
+import MeuPerfil from './pages/dashboard/perfil/MeuPerfil'
+import Usuarios from './pages/dashboard/usuarios/Usuarios'
+import EditarUsuario from './pages/dashboard/usuarios/EditarUsuario'
 import './App.css'
 
 function Home() {
@@ -40,6 +54,20 @@ export default function App() {
       <Route path="/projetos/limpaz" element={<LIMPAZ />} />
       <Route path="/login" element={<Login />} />
       <Route path="/cadastro" element={<Cadastro />} />
+      <Route path="/dashboard" element={<PrivateRoute><DashboardLayout /></PrivateRoute>}>
+        <Route index element={<DashboardHome />} />
+        <Route path="eventos/criar" element={<CriarEvento />} />
+        <Route path="eventos/editar" element={<EditarEvento />} />
+        <Route path="eventos/meus-eventos" element={<MeusEventos />} />
+        <Route path="escala/criar" element={<CriarEscala />} />
+        <Route path="escala/editar" element={<EditarEscala />} />
+        <Route path="escala/minhas-escalas" element={<MinhasEscalas />} />
+        <Route path="ministerios/criar" element={<CriarMinisterio />} />
+        <Route path="ministerios/editar" element={<EditarMinisterio />} />
+        <Route path="perfil" element={<MeuPerfil />} />
+        <Route path="usuarios" element={<Usuarios />} />
+        <Route path="usuarios/:id/editar" element={<EditarUsuario />} />
+      </Route>
     </Routes>
   )
 }
