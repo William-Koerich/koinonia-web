@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useNavigate, Link } from 'react-router-dom'
 import { Eye, EyeOff, LogIn, ArrowLeft } from 'lucide-react'
 import logo3 from '../assets/logo-3.png'
+import { API } from '../config'
 
 export default function Login() {
   const navigate = useNavigate()
@@ -17,7 +18,7 @@ export default function Login() {
     setErro('')
     setLoading(true)
     try {
-      const res = await fetch('http://localhost:3000/auth/login', {
+      const res = await fetch(`${API}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, senha }),
