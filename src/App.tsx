@@ -26,6 +26,8 @@ import EditarMinisterio from './pages/dashboard/ministerios/EditarMinisterio'
 import MeuPerfil from './pages/dashboard/perfil/MeuPerfil'
 import Usuarios from './pages/dashboard/usuarios/Usuarios'
 import EditarUsuario from './pages/dashboard/usuarios/EditarUsuario'
+import InscritosEvento from './pages/dashboard/eventos/InscritosEvento'
+import EditarEventoForm from './pages/dashboard/eventos/EditarEventoForm'
 import './App.css'
 
 function Home() {
@@ -67,6 +69,8 @@ export default function App() {
         <Route path="perfil" element={<MeuPerfil />} />
         <Route path="usuarios" element={<Usuarios />} />
         <Route path="usuarios/:id/editar" element={<EditarUsuario />} />
+        <Route path="eventos/:id/editar" element={<EditarEventoForm />} />
+        <Route path="eventos/:id/inscritos" element={<InscritosEvento />} />
       </Route>
     </Routes>
   )
