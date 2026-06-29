@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import pastorDanielImg from '../assets/pastor-daniel.png'
+import pastorLaelsonImg from '../assets/pastor-laelson.png'
 
 const pastores = [
   {
@@ -78,6 +80,7 @@ const pastores = [
     initials: 'LA',
     colorA: '#90b0ff',
     colorB: '#2040a0',
+    foto: pastorLaelsonImg,
   },
   {
     id: 8,
@@ -100,6 +103,7 @@ const pastores = [
     initials: 'DN',
     colorA: '#80b0d0',
     colorB: '#203860',
+    foto: pastorDanielImg,
   },
   {
     id: 10,
@@ -230,35 +234,49 @@ export default function Pastores() {
               userSelect: 'none',
             }}
           >
-            {/* Avatar / photo placeholder */}
-            <div style={{
-              position: 'absolute', inset: 0,
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              flexDirection: 'column', gap: '10px',
-              paddingBottom: expanded ? '65%' : '44%',
-              transition: 'padding-bottom 0.45s ease',
-              pointerEvents: 'none',
-            }}>
+            {/* Avatar / photo */}
+            {'foto' in pastor && pastor.foto ? (
+              <img
+                src={pastor.foto as string}
+                alt={pastor.nome}
+                draggable={false}
+                style={{
+                  position: 'absolute', inset: 0,
+                  width: '100%', height: '100%',
+                  objectFit: 'cover', objectPosition: 'center top',
+                  pointerEvents: 'none',
+                }}
+              />
+            ) : (
               <div style={{
-                width: 'clamp(72px, 16vw, 100px)',
-                height: 'clamp(72px, 16vw, 100px)',
-                borderRadius: '50%',
-                background: `linear-gradient(135deg, ${pastor.colorA}, ${pastor.colorB})`,
+                position: 'absolute', inset: 0,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'Cinzel, serif', fontWeight: 700,
-                fontSize: 'clamp(20px, 4vw, 30px)', color: '#fff',
-                boxShadow: `0 0 36px ${pastor.colorA}35`,
-                flexShrink: 0,
+                flexDirection: 'column', gap: '10px',
+                paddingBottom: expanded ? '65%' : '44%',
+                transition: 'padding-bottom 0.45s ease',
+                pointerEvents: 'none',
               }}>
-                {pastor.initials}
+                <div style={{
+                  width: 'clamp(72px, 16vw, 100px)',
+                  height: 'clamp(72px, 16vw, 100px)',
+                  borderRadius: '50%',
+                  background: `linear-gradient(135deg, ${pastor.colorA}, ${pastor.colorB})`,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontFamily: 'Cinzel, serif', fontWeight: 700,
+                  fontSize: 'clamp(20px, 4vw, 30px)', color: '#fff',
+                  boxShadow: `0 0 36px ${pastor.colorA}35`,
+                  flexShrink: 0,
+                }}>
+                  {pastor.initials}
+                </div>
+                <span style={{
+                  fontSize: '9px', color: 'rgba(255,255,255,0.28)',
+                  letterSpacing: '2px', fontFamily: 'Cinzel, serif',
+                }}>
+                  FOTO EM BREVE
+                </span>
               </div>
-              <span style={{
-                fontSize: '9px', color: 'rgba(255,255,255,0.28)',
-                letterSpacing: '2px', fontFamily: 'Cinzel, serif',
-              }}>
-                FOTO EM BREVE
-              </span>
-            </div>
+            )}
 
             {/* Instagram overlay */}
             <div style={{
