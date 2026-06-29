@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Users, Edit2, Trash2, PowerOff, Power, Search, X, AlertTriangle, CheckCircle } from 'lucide-react'
 import PageShell from '../PageShell'
 
-const API = 'http://localhost:3000'
+import { API } from '../../../config'
 
 function authHeader() {
   return { Authorization: `Bearer ${localStorage.getItem('koinonia_token') ?? ''}` }
