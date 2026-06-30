@@ -3,7 +3,7 @@ import { Calendar, LayoutGrid, Users } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 const cards = [
-  { icon: Calendar, label: 'Eventos', sub: 'Gerencie os eventos da Igreja', path: '/dashboard/eventos/editar', color: '#d3b86a' },
+  { icon: Calendar, label: 'Eventos', sub: 'Veja e inscreva-se nos próximos eventos', path: '/dashboard/eventos', color: '#d3b86a' },
   { icon: LayoutGrid, label: 'Escala', sub: 'Organize as escalas de serviço', path: '/dashboard/escala/criar', color: '#6090e0' },
   { icon: Users, label: 'Ministérios', sub: 'Administre os ministérios', path: '/dashboard/ministerios/criar', color: '#90c080' },
 ]

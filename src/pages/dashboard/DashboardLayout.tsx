@@ -15,8 +15,9 @@ const menu = [
     label: 'Eventos',
     icon: Calendar,
     children: [
+      { label: 'Ver Eventos', path: '/dashboard/eventos' },
       { label: 'Criar', path: '/dashboard/eventos/criar' },
-      { label: 'Editar', path: '/dashboard/eventos/editar' },
+      { label: 'Gerenciar', path: '/dashboard/eventos/editar' },
       { label: 'Meus Eventos', path: '/dashboard/eventos/meus-eventos' },
     ],
   },

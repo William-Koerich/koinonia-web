@@ -17,6 +17,7 @@ import DashboardLayout from './pages/dashboard/DashboardLayout'
 import DashboardHome from './pages/dashboard/DashboardHome'
 import CriarEvento from './pages/dashboard/eventos/CriarEvento'
 import EditarEvento from './pages/dashboard/eventos/EditarEvento'
+import ListaEventos from './pages/dashboard/eventos/ListaEventos'
 import MeusEventos from './pages/dashboard/eventos/MeusEventos'
 import CriarEscala from './pages/dashboard/escala/CriarEscala'
 import EditarEscala from './pages/dashboard/escala/EditarEscala'
@@ -58,6 +59,7 @@ export default function App() {
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/dashboard" element={<PrivateRoute><DashboardLayout /></PrivateRoute>}>
         <Route index element={<DashboardHome />} />
+        <Route path="eventos" element={<ListaEventos />} />
         <Route path="eventos/criar" element={<CriarEvento />} />
         <Route path="eventos/editar" element={<EditarEvento />} />
         <Route path="eventos/meus-eventos" element={<MeusEventos />} />
