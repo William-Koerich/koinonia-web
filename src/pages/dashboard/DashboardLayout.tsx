@@ -18,6 +18,7 @@ const menu = [
       { label: 'Ver Eventos', path: '/dashboard/eventos' },
       { label: 'Criar', path: '/dashboard/eventos/criar' },
       { label: 'Gerenciar', path: '/dashboard/eventos/editar' },
+      { label: 'Gerenciar Inscrições', path: '/dashboard/eventos/inscricoes' },
       { label: 'Meus Eventos', path: '/dashboard/eventos/meus-eventos' },
     ],
   },

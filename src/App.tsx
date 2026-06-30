@@ -29,6 +29,8 @@ import Usuarios from './pages/dashboard/usuarios/Usuarios'
 import EditarUsuario from './pages/dashboard/usuarios/EditarUsuario'
 import InscritosEvento from './pages/dashboard/eventos/InscritosEvento'
 import EditarEventoForm from './pages/dashboard/eventos/EditarEventoForm'
+import DetalheEvento from './pages/dashboard/eventos/DetalheEvento'
+import GerenciarInscricoes from './pages/dashboard/eventos/GerenciarInscricoes'
 import './App.css'
 
 function Home() {
@@ -63,6 +65,8 @@ export default function App() {
         <Route path="eventos/criar" element={<CriarEvento />} />
         <Route path="eventos/editar" element={<EditarEvento />} />
         <Route path="eventos/meus-eventos" element={<MeusEventos />} />
+        <Route path="eventos/inscricoes" element={<GerenciarInscricoes />} />
+        <Route path="eventos/:id" element={<DetalheEvento />} />
         <Route path="escala/criar" element={<CriarEscala />} />
         <Route path="escala/editar" element={<EditarEscala />} />
         <Route path="escala/minhas-escalas" element={<MinhasEscalas />} />
